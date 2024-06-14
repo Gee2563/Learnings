@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    
+    <p>
+        {% if latest_order_list %}
+        <ul>
+        {% for order in latest_order_list %}
+            <li><a href="/stockIorders/{{ order.id }}/">{{ order.customer }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}</p>
+</body>
+
+</html>
